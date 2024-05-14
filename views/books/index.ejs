@@ -4,50 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Books Data</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
   </head>
-  <body>
+  <body class="container">
     <h1><%= genre %> Books Data</h1>
 
     <% if(genre !== "All"){ %>
-    <a href="/books">All Data</a>
+    <a class="btn btn-outline-success" href="/books">All Data</a>
     <% } %>
 
-    <section>
-      <h3>Menu :</h3>
-      <a href="/books/create">Create book data</a>
-    </section>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Details</th>
+        </tr>
+      </thead>
 
-    <ul>
-      <% for(let book of books){ %>
-      <li>
-        <span> <%= book.title %> - <%= book.author %></span>
-        <a href="/books/<%= book._id %>">details</a>
-        <span>
-          <form
-            style="display: inline"
-            action="/books/<%= book._id %>?_method=DELETE"
-            method="post"
-          >
-            <button
-              style="
-                border: none;
-                background-color: white;
-                color: blue;
-                text-decoration: underline;
-                cursor: pointer;
-                font-weight: 500;
-                font-size: 16px;
-                font-family: 'Times New Roman', Times, serif;
-              "
-              type="submit"
+      <tbody>
+        <% for(let i = 0; i < books.length; i++){ %>
+        <tr>
+          <th scope="col">
+            <form
+              action="/books/<%= books[i]._id %>?_method=DELETE"
+              method="post"
             >
-              delete
-            </button>
-          </form>
-        </span>
-      </li>
-      <% } %>
-    </ul>
-    <h3>Total Buku : <%= books.length %></h3>
+              <button class="border-0 bg-transparent" type="submit">
+                <i class="fa fa-trash-o" style="font-size: 24px"></i>
+              </button>
+            </form>
+          </th>
+          <td><%= books[i].title %></td>
+          <td><%= books[i].author %></td>
+          <td class="text-center">
+            <a href="/books/<%= books[i]._id %>">
+              <i class="fa fa-edit" style="font-size: 24px; color: black"></i
+            ></a>
+          </td>
+          <td></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+
+    <div class="row">
+      <div class="col">
+        <h3>Total Buku : <%= books.length %></h3>
+      </div>
+      <div class="col text-end">
+        <a href="/books/create">
+          <i class="fa fa-plus" style="font-size: 24px; color: black"></i>
+        </a>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
