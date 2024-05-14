@@ -71,7 +71,7 @@ This is a simple project for managing a book collection built using Express.js a
 2. The book will be removed from the collection.
 
 ## Directory Structure
-
+```bash
 .
 ├── index.js              # Main server file
 ├── seeds.js              # Script to seed the database with initial data
