@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Details of data</h1>
+
+    <section>
+      <h2><%= books.title %></h3>
+      <p>Author: <%= books.author %></p>
+      <p>Pages: <%= books.pages %></p>
+      <p>
+        Genre: 
+        <a href="/books/?genre=<%= books.genre %>">
+          <%= books.genre %>
+        </a>
+      </p>
+      <p>Year: <%= books.year %></p>
+      <p>Language: <%= books.language %></p>
+    </section>
+
+    <div style="display: flex; flex-direction: row;">
+      <button><a href="/books/<%= books._id %>/edit">Edit</a></button>
+      <br />
+      <form action="/books/<%= books._id %>?_method=DELETE" method="post">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+    <br>
+
+    <a href="/books">Back</a>
+  </body>
+</html>

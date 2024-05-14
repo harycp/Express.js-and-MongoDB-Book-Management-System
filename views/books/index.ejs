@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Data</title>
+  </head>
+  <body>
+    <h1><%= genre %> Books Data</h1>
+
+    <% if(genre !== "All"){ %>
+    <a href="/books">All Data</a>
+    <% } %>
+
+    <section>
+      <h3>Menu :</h3>
+      <a href="/books/create">Create book data</a>
+    </section>
+
+    <ul>
+      <% for(let book of books){ %>
+      <li>
+        <span> <%= book.title %> - <%= book.author %></span>
+        <a href="/books/<%= book._id %>">details</a>
+        <span>
+          <form
+            style="display: inline"
+            action="/books/<%= book._id %>?_method=DELETE"
+            method="post"
+          >
+            <button
+              style="
+                border: none;
+                background-color: white;
+                color: blue;
+                text-decoration: underline;
+                cursor: pointer;
+                font-weight: 500;
+                font-size: 16px;
+                font-family: 'Times New Roman', Times, serif;
+              "
+              type="submit"
+            >
+              delete
+            </button>
+          </form>
+        </span>
+      </li>
+      <% } %>
+    </ul>
+    <h3>Total Buku : <%= books.length %></h3>
+  </body>
+</html>

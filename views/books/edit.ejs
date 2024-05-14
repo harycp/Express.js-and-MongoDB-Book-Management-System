@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Edit book item</h1>
+    <form action="/books/<%= books._id %>?_method=PUT" method="POST">
+      <label for="title">Title of book</label>
+      <input type="text" name="title" id="title" value="<%= books.title %>" />
+      <br />
+
+      <label for="author">Author</label>
+      <input
+        type="text"
+        name="author"
+        id="author"
+        value="<%= books.author %>"
+      />
+      <br />
+
+      <label for="pages">Pages</label>
+      <input type="number" name="pages" id="pages" value="<%= books.pages %>" />
+      <br />
+
+      <label for="genre">Genre</label>
+      <select name="genre" id="genre">
+        <option value="fiction" <%= books.genre == "fiction" ? "selected" : "" %>>Fiction</option>
+        <option value="non-fiction" <%= books.genre == "non-fiction" ? "selected" : "" %>>Non-fiction</option>
+        <option value="thriller" <%= books.genre == "thriller" ? "selected" : "" %>>Thriller</option>
+        <option value="romance" <%= books.genre == "romance" ? "selected" : "" %>>Romance</option>
+        <option value="history" <%= books.genre == "history" ? "selected" : "" %>>History</option>
+        <option value="philosophy" <%= books.genre == "philosophy" ? "selected" : "" %>>Philosophy</option>
+      </select>
+
+      <br />
+      <label for="year">Year</label>
+      <input type="number" name="year" id="year" value="<%= books.year %>"/>
+      <br />
+
+      <label for="language">Language</label>
+      <input type="text" name="language" id="language" value="<%= books.language %>"/>
+      <br />
+
+      <button type="submit">Edit</button>
+    </form>
+    <br />
+    <a href="/books">Back</a>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Create new book item</h1>
+    <form action="/books" method="POST">
+      <label for="title">Title of book</label>
+      <input type="text" name="title" id="title" />
+      <br />
+
+      <label for="author">Author</label>
+      <input type="text" name="author" id="author" />
+      <br />
+
+      <label for="pages">Pages</label>
+      <input type="number" name="pages" id="pages" />
+      <br />
+
+      <label for="genre">Genre</label>
+      <select name="genre" id="genre">
+        <option value="fiction">Fiction</option>
+        <option value="non-fiction">Non-fiction</option>
+        <option value="thriller">Thriller</option>
+        <option value="romance">Romance</option>
+        <option value="history">History</option>
+        <option value="philosophy">Philosophy</option>
+      </select>
+
+      <br />
+      <label for="year">Year</label>
+      <input type="number" name="year" id="year" />
+      <br />
+
+      <label for="language">Language</label>
+      <input type="text" name="language" id="language" />
+      <br />
+
+      <button type="submit">Create</button>
+    </form>
+    <br />
+    <a href="/books">Back</a>
+  </body>
+</html>
