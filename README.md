@@ -22,5 +22,22 @@ This project is a comprehensive book management system built using Express.js an
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/book-management-system.git
-   cd book-management-system
+   git clone https://github.com/harycp/Express.js-and-MongoDB-Book-Management-System.git
+   
+2. Install dependencies: :
+   ```bash
+   npm install
+
+3. Start MongoDB server:
+   Ensure MongoDB is installed and running on your system. If not, download and install it from the official website.
+
+4. Seed the database (optional):
+   To populate the database with sample data, run:
+   ```bash
+   node seeds.js
+
+5. Start the application:
+   ```bash
+   node index.js
+
+6. Open your browser and navigate to http://localhost:8080 to see the application in action.
