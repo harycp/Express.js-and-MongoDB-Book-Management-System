@@ -41,3 +41,48 @@ This project is a comprehensive book management system built using Express.js an
    node index.js
 
 6. Open your browser and navigate to http://localhost:8080 to see the application in action.
+
+## Usage
+
+**Add a New Book**
+
+1. Navigate to `/books/create` in your browser.
+2. Fill out the form with book details.
+3. Click "Create" to add the book to the collection.
+
+**View All Books**
+
+1. Navigate to `/books` in your browser.
+2. You will see a list of all books in the collection.
+
+**View Book Details**
+
+1. From the list of books, click on the "details" link next to a book to view its details.
+
+**Edit a Book**
+
+1. From the book details page, click the "Edit" button.
+2. Update the book information in the form.
+3. Click "Edit" to save the changes.
+
+**Delete a Book**
+
+1. From the book details page, click the "Delete" button.
+2. The book will be removed from the collection.
+
+## Directory Structure
+
+.
+├── index.js              # Main server file
+├── seeds.js              # Script to seed the database with initial data
+├── models
+│   └── books.js          # Mongoose model for books
+├── views
+│   ├── create.ejs        # View for creating a new book
+│   ├── edit.ejs          # View for editing an existing book
+│   ├── index.ejs         # View for listing all books
+│   └── show.ejs          # View for showing details of a single book
+├── package.json          # Project metadata and dependencies
+└── README.md             # Project documentation
+
+
