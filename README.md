@@ -17,6 +17,7 @@ This is a simple project for managing a book collection built using Express.js a
 - **Mongoose**: A MongoDB object modeling tool designed to work in an asynchronous environment.
 - **EJS**: Embedded JavaScript templating. EJS lets you generate HTML markup with plain JavaScript.
 - **Method-Override**: Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn’t support it.
+- **Bootstrap 5.3.3**
 
 ## Installation
 
