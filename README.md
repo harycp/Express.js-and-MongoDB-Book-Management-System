@@ -1,6 +1,6 @@
 # Express.js and MongoDB Book Management System
 
-This project is a comprehensive book management system built using Express.js and MongoDB. It allows users to create, read, update, and delete book entries with ease.
+This is a simple project for managing a book collection built using Express.js and MongoDB. This project allows users to create, read, update, and delete book data with ease. It's worth noting that this project doesn't have any styling applied.
 
 ## Features
 
