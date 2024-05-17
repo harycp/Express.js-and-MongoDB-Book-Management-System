@@ -4,16 +4,16 @@ const { Schema } = mongoose;
 const bookSchema = new Schema({
   title: {
     type: String,
-    require: true,
+    required: true,
   },
   author: {
     type: String,
-    require: true,
+    required: true,
   },
   pages: {
     type: Number,
     min: 0,
-    require: true,
+    required: true,
   },
   genre: {
     type: String,
@@ -25,17 +25,17 @@ const bookSchema = new Schema({
       "history",
       "philosophy",
     ],
-    require: true,
+    required: true,
   },
   year: {
     type: Number,
     min: 0,
     max: new Date().getFullYear(),
-    require: true,
+    required: true,
   },
   language: {
     type: String,
-    require: true,
+    required: true,
   },
 });
 
