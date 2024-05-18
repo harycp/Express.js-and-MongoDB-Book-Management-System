@@ -76,6 +76,7 @@ This is a simple project for managing a book collection built using Express.js a
 .
 ├── index.js              # Main server file
 ├── seeds.js              # Script to seed the database with initial data
+├── ErrorHandler.js       # Script for error handling
 ├── models
 │   └── books.js          # Mongoose model for books
 ├── views
